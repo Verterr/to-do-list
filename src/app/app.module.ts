@@ -13,6 +13,7 @@ import {TaskListComponent} from './task-list.component';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatIconModule,
     MatNativeDateModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
