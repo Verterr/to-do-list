@@ -8,4 +8,5 @@ import {todoList} from '../todoList';
 })
 export class TaskListComponent {
   todos = todoList;
+
 }
