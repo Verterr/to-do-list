@@ -7,13 +7,14 @@ import {MatInputModule} from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatNativeDateModule} from '@angular/material/core';
-import {MainInputComponent} from './main-input.component';
-import {TaskListComponent} from './task-list.component';
+import {MainInputComponent} from './main-input/main-input.component';
+import {TaskListComponent} from './task-list/task-list.component';
 
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {FormsModule} from '@angular/forms';
     MatIconModule,
     MatNativeDateModule,
     FormsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
