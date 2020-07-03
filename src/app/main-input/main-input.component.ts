@@ -7,7 +7,6 @@ import {todoList} from '../todoList';
   templateUrl: './main-input.component.html',
   styleUrls: []
 })
-
 export class MainInputComponent {
 
   model = new Todo('todo','low', '', '', '');
