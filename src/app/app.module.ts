@@ -7,8 +7,8 @@ import {MatInputModule} from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatNativeDateModule} from '@angular/material/core';
-import {MainInputComponent} from './main-input/main-input.component';
-import {TaskListComponent} from './task-list/task-list.component';
+import {AddTodoComponent} from './add-todo/add-todo.component';
+import {TodoComponent} from './todo/todo.component';
 
 
 import { AppComponent } from './app.component';
@@ -19,8 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
-    MainInputComponent,
-    TaskListComponent
+    AddTodoComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

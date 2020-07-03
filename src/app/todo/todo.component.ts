@@ -3,10 +3,10 @@ import {todoList} from '../todoList';
 
 @Component({
   selector: 'task-list',
-  templateUrl: './task-list.component.html',
+  templateUrl: './todo.component.html',
   styles: []
 })
-export class TaskListComponent {
+export class TodoComponent {
   todos = todoList;
 
 }

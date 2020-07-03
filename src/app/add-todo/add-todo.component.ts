@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
-import {Todo} from '../todo';
+import {Todo} from '../Todo/todo';
 import {todoList} from '../todoList';
 
 @Component({
   selector: 'main-input',
-  templateUrl: './main-input.component.html',
+  templateUrl: './add-todo.component.html',
   styleUrls: []
 })
-export class MainInputComponent {
+export class AddTodoComponent {
 
   model = new Todo('todo','low', '', '', '');
 
