@@ -1,14 +1,11 @@
 import {Component} from '@angular/core';
+import {todoList} from '../todoList';
 
 @Component({
   selector: 'task-list',
-  template: `
-  <div class="TaskTemplate">
-    dupa
-  </div>
-  `,
+  templateUrl: './task-list.component.html',
   styles: []
 })
 export class TaskListComponent {
-
+  todos = todoList;
 }

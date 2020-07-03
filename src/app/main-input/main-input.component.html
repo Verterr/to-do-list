@@ -1,10 +1,18 @@
 <mat-card class="Main-input">
-  <form (ngSubmit)="onSubmit(title, date, description)">
-    <mat-form-field appearance="fill" style="width: 68%">
+  <form (ngSubmit)="onSubmit(title, priority, date, description)">
+    <mat-form-field appearance="fill" style="width: 60%">
       <mat-label>Task name</mat-label>
       <input matInput name="title" [(ngModel)]="model.title" #title='ngModel' required>
     </mat-form-field>
-    <mat-form-field appearance="fill" style="width: 30%; margin-left: 2%">
+    <mat-form-field appearance="fill" style="width: 13%; margin-left: 1%">
+      <mat-label>Priority</mat-label>
+      <mat-select required [(ngModel)]="model.priority" [(value)]="model.priority" #priority='ngModel'>
+        <mat-option value="low">Low</mat-option>
+        <mat-option value="medium">Medium</mat-option>
+        <mat-option value="height">Height</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" style="width: 25%; margin-left: 1%">
       <mat-label>Choose a deadline date</mat-label>
       <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="model.date" #date='ngModel'>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

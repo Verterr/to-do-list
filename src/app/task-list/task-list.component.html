@@ -1,0 +1,17 @@
+<mat-card class="Task-list" *ngFor="let todo of todos" style="margin-bottom: 1%; display: flex; justify-content: space-between; align-items: center">
+  <div class="infoContainer">
+    <div class="firstRow" style="display: flex; align-items: center">
+      <h3 class="titleContainer" style="margin: 5px 0; padding: 0">
+        {{todo.title}}
+      </h3>
+      <p>{{todo.priority}}</p>
+    </div>
+    <h4 class="dateContainer" style="margin: 5px 0; padding: 0">
+      {{todo.date}}
+    </h4>
+    <p class="descriptionContainer" style="margin: 0">
+      {{todo.description}}
+    </p>
+  </div>
+  <img src="./assets/icons8-trash.svg" style="height: 8vh;" >
+</mat-card>
