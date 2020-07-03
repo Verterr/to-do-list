@@ -13,7 +13,7 @@ import {TodoComponent} from './todo/todo.component';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {TodoListComponent} from './todo-list/todo-list.component';
 
@@ -36,6 +36,7 @@ import {TodoListComponent} from './todo-list/todo-list.component';
     MatNativeDateModule,
     FormsModule,
     MatSelectModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
