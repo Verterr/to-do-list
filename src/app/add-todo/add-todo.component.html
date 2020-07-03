@@ -1,12 +1,12 @@
 <mat-card class="Main-input">
-  <form (ngSubmit)="onSubmit(title, priority, date, description)">
+  <form (ngSubmit)="onSubmit(title, selected, date, description)">
     <mat-form-field appearance="fill" style="width: 60%">
       <mat-label>Task name</mat-label>
       <input matInput name="title" [(ngModel)]="model.title" #title='ngModel' required>
     </mat-form-field>
     <mat-form-field appearance="fill" style="width: 13%; margin-left: 1%">
       <mat-label>Priority</mat-label>
-      <mat-select required [(ngModel)]="model.priority" [(value)]="model.priority" #priority='ngModel'>
+      <mat-select required [formControl]="selected" [(ngModel)]="model.priority" [(value)]="model.priority">
         <mat-option value="low">Low</mat-option>
         <mat-option value="medium">Medium</mat-option>
         <mat-option value="high">High</mat-option>

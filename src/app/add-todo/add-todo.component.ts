@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Todo} from '../Todo/todo';
 import {todoList} from '../todoList';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'main-input',
@@ -9,17 +10,18 @@ import {todoList} from '../todoList';
 })
 export class AddTodoComponent {
 
-  model = new Todo('todo','low', '', '', '');
-
+  model = new Todo('todo', 'medium', '', '', '');
+  selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
-    todoList.push({
-      status: 'todo',
-      priority: priority.model ,
-      title: title.model,
-      date: date.model,
-      description: description.model
-    });
-
+    if(title.model.length !== 0){
+      todoList.push({
+        status: 'todo',
+        priority: priority.value,
+        title: title.model,
+        date: date.model,
+        description: description.model
+      });
+    }
     console.log(todoList);
   }
 
