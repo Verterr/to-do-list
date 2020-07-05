@@ -8,5 +8,4 @@ import {Todo} from '../Todo/todo';
 })
 export class TodoComponent {
   @Input() todo: Todo;
-  @Input() status: Todo['status'];
 }

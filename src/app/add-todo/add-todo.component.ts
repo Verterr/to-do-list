@@ -10,12 +10,11 @@ import {FormControl} from '@angular/forms';
 })
 export class AddTodoComponent {
 
-  model = new Todo('todo', 'medium', '', '', '');
+  model = new Todo( 'medium', '', '', '');
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
     if(title.model.length !== 0){
       todoList.push({
-        status: 'todo',
         priority: priority.value,
         title: title.model,
         date: date.model,

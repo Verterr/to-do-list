@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {todoList} from '../todoList';
+import {doneList, inProgressList, todoList} from '../todoList';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {Todo} from '../todo/todo';
+import {Todo} from '../Todo/todo';
 
 @Component({
   selector: 'todo-list',
@@ -10,10 +10,8 @@ import {Todo} from '../todo/todo';
 })
 export class TodoListComponent {
   todos = todoList;
-
-  inProgressStatus = 'inProgress';
-  todoStatus = 'todo';
-  doneStatus = 'done';
+  inProgress = inProgressList;
+  done = doneList;
 
   drop(event: CdkDragDrop<Todo[], any>) {
     if (event.previousContainer === event.container) {
