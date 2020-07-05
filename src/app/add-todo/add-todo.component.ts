@@ -10,6 +10,7 @@ import {FormControl} from '@angular/forms';
 })
 export class AddTodoComponent {
 
+  currentDate = new FormControl(new Date());
   model = new Todo( 'medium', '', '', '');
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
@@ -17,11 +18,17 @@ export class AddTodoComponent {
       todoList.push({
         priority: priority.value,
         title: title.model,
-        date: date.model,
+        date: date.model.toLocaleDateString(),
         description: description.model
       });
     }
     console.log(todoList);
+  }
+
+  dateFilter(day) {
+    const today = new Date();
+    today.setDate(today.getDate()-1);
+    return day > today;
   }
 
 }
