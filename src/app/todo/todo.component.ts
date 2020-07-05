@@ -1,12 +1,11 @@
-import {Component} from '@angular/core';
-import {todoList} from '../todoList';
+import {Component, Input} from '@angular/core';
+import {Todo} from './todo';
 
 @Component({
-  selector: 'task-list',
+  selector: 'todo',
   templateUrl: './todo.component.html',
   styles: []
 })
 export class TodoComponent {
-  todos = todoList;
-
+  @Input() todo: Todo;
 }

@@ -3,6 +3,7 @@
     <main-input></main-input>
   </div>
   <div class="TaskListContainer" style="display: block; margin: 2% auto 0 auto; width: 80%">
-    <task-list></task-list>
+    <h2>In Progress</h2>
+    <todo *ngFor="let todo of todos" [todo]="todo"></todo>
   </div>
 </div>

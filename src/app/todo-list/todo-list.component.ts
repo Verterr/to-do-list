@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {todoList} from '../todoList';
 
 @Component({
   selector: 'todo-list',
@@ -6,5 +7,5 @@ import {Component} from '@angular/core';
   styleUrls: []
 })
 export class TodoListComponent {
-
+  todos = todoList;
 }
