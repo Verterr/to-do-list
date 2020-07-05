@@ -3,7 +3,17 @@
     <main-input></main-input>
   </div>
   <div class="TaskListContainer" style="display: block; margin: 2% auto 0 auto; width: 80%">
-    <h2>In Progress</h2>
-    <todo *ngFor="let todo of todos" [todo]="todo"></todo>
+    <div class="InProgressContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      <h2>In Progress</h2>
+      <todo *ngFor="let todo of todos" [todo]="todo" [status]="inProgressStatus"></todo>
+    </div>
+    <div class="TodoContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      <h2>Todo</h2>
+      <todo *ngFor="let todo of todos" [todo]="todo" [status]="todoStatus"></todo>
+    </div>
+    <div class="DoneContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      <h2>Todo</h2>
+      <todo *ngFor="let todo of todos" [todo]="todo" [status]="doneStatus"></todo>
+    </div>
   </div>
 </div>

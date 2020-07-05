@@ -1,6 +1,6 @@
 export class Todo {
   constructor(
-    public status: 'todo' | 'in-progress' | 'done',
+    public status: 'todo' | 'inProgress' | 'done',
     public priority: string,
     public title: string,
     public date: string,

@@ -1,4 +1,4 @@
-<mat-card class="Task" style="margin-bottom: 1%; display: flex; justify-content: space-between; align-items: center">
+<mat-card *ngIf="todo.status === status" class="Task" style="margin-bottom: 1%; display: flex; justify-content: space-between; align-items: center">
   <div class="infoContainer" style="width: 90%">
     <div class="firstRow" style="display: flex; align-items: center; width: 30%">
       <h3 class="titleContainer" style="margin: 5px 0; padding: 0;">

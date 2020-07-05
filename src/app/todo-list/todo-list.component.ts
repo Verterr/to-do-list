@@ -8,4 +8,8 @@ import {todoList} from '../todoList';
 })
 export class TodoListComponent {
   todos = todoList;
+
+  inProgressStatus = 'inProgress';
+  todoStatus = 'todo';
+  doneStatus = 'done';
 }

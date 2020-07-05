@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Todo} from './todo';
+import {Todo} from '../Todo/todo';
 
 @Component({
   selector: 'todo',
@@ -8,4 +8,5 @@ import {Todo} from './todo';
 })
 export class TodoComponent {
   @Input() todo: Todo;
+  @Input() status: Todo['status'];
 }
