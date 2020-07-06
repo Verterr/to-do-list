@@ -95,4 +95,30 @@
     }
   }
 }
+@media all and (max-width: 1000px) {
+  .MainContainer {
+    .InputContainer {
+      width: 95%;
+    }
+    .SortsContainer {
+      width: 95%;
+    }
+    .TaskListContainer {
+      width: 95%;
+    }
+  }
+  .Main-Input {
+    .Task-Name {
+      width: 40%;
+    }
+    .Task-Priority {
+      width: 29%;
+      margin-left: 1%;
+    }
 
+    .Calendar-Picker {
+      width: 29%;
+      margin-left: 1%;
+    }
+  }
+}

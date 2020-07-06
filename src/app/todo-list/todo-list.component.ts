@@ -17,9 +17,9 @@ export class TodoListComponent {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      todoList.forEach((todo) => todo.status = 'todo');
-      inProgressList.forEach((todo) => todo.status = 'inProgress');
-      doneList.forEach((todo) => todo.status = 'done');
+      todoList.forEach((todo) => todo.status = 'do-zrobienia');
+      inProgressList.forEach((todo) => todo.status = 'w-toku');
+      doneList.forEach((todo) => todo.status = 'gotowe');
       transferArrayItem(event.previousContainer.data,
         event.container.data,
         event.previousIndex,

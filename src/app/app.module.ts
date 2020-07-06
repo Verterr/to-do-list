@@ -9,7 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {DateAdapter, MatNativeDateModule} from '@angular/material/core';
 import {AddTodoComponent} from './add-todo/add-todo.component';
 import {CustomDateAdapter} from './add-todo/custom-date-adapter';
-import {TodoComponent} from './todo/todo.component';
+import {TodoComponent} from './Todo/todo.component';
 import {SortsComponent} from './sorts/sorts.component';
 
 
