@@ -10,10 +10,18 @@ import {doneList, inProgressList, todoList} from '../todoList';
 export class FiltersComponent {
   todos = todoList;
   inProgress = inProgressList;
-  done = doneList;
 
   byDateSort() {
     this.todos.sort(function(a, b){
+      if(a.date === null || b.date === null){
+        return new Date(b.date) as any - (new Date(a.date) as any);
+      }
+      return new Date(a.date) as any - (new Date(b.date) as any);
+    });
+    this.inProgress.sort(function(a, b){
+      if(a.date === null || b.date === null){
+        return new Date(b.date) as any - (new Date(a.date) as any);
+      }
       return new Date(a.date) as any - (new Date(b.date) as any);
     });
   }
