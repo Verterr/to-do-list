@@ -14,11 +14,14 @@ export class AddTodoComponent {
   model = new Todo( 'medium', '', '', '');
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
+    if(date.model.length !== 0){
+      date.model = date.model.toLocaleDateString();
+    }
     if(title.model.length !== 0){
       todoList.push({
         priority: priority.value,
         title: title.model,
-        date: date.model.toLocaleDateString(),
+        date: date.model,
         description: description.model
       });
     }
