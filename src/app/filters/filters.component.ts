@@ -12,4 +12,9 @@ export class FiltersComponent {
   inProgress = inProgressList;
   done = doneList;
 
+  byDateSort() {
+    this.todos.sort(function(a, b){
+      return new Date(a.date) as any - (new Date(b.date) as any);
+    });
+  }
 }
