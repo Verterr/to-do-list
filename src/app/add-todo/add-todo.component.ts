@@ -11,14 +11,18 @@ import {FormControl} from '@angular/forms';
 export class AddTodoComponent {
 
   currentDate = new FormControl(new Date());
-  model = new Todo( 'medium', '', '', '');
+  model = new Todo( 'medium', '', null, '');
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
+    if(date.model !== null){
+      console.log(date.model);
+      date.model = date.model.toLocaleDateString();
+    }
     if(title.model.length !== 0){
       todoList.push({
         priority: priority.value,
         title: title.model,
-        date: date.model.toLocaleDateString(),
+        date: date.model,
         description: description.model
       });
     }
