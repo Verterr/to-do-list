@@ -25,4 +25,18 @@ export class FiltersComponent {
       return new Date(a.date) as any - (new Date(b.date) as any);
     });
   }
+
+  byPrioritySort() {
+    const priorities = {
+      'high' : 0,
+      'medium' : 1,
+      'low' : 2
+    };
+    this.todos.sort(function(a, b) {
+      return priorities[a.priority] - priorities[b.priority];
+    });
+    this.inProgress.sort(function(a, b) {
+      return priorities[a.priority] - priorities[b.priority];
+    });
+  }
 }
