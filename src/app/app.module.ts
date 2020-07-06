@@ -10,7 +10,7 @@ import {DateAdapter, MatNativeDateModule} from '@angular/material/core';
 import {AddTodoComponent} from './add-todo/add-todo.component';
 import {CustomDateAdapter} from './add-todo/custom-date-adapter';
 import {TodoComponent} from './todo/todo.component';
-import {FiltersComponent} from './filters/filters.component';
+import {SortsComponent} from './sorts/sorts.component';
 
 
 import { AppComponent } from './app.component';
@@ -26,7 +26,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     AddTodoComponent,
     TodoComponent,
     TodoListComponent,
-    FiltersComponent
+    SortsComponent
   ],
   imports: [
     BrowserModule,
