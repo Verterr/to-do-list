@@ -1,1 +1,101 @@
+.MainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  .InputContainer {
+    display: block;
+    margin: 5% auto 0 auto;
+    width: 80%;
+  }
+  .SortsContainer {
+    display: block;
+    margin: 2% auto 0 auto;
+    width: 80%;
+  }
+  .TaskListContainer {
+    display: block;
+    margin: 2% auto 0 auto;
+    width: 80%;
+    .InProgressContainer {
+      border-bottom: 3px solid rgb(120, 120, 120);
+      margin-bottom: 10px;
+    }
+    .TodoContainer {
+      border-bottom: 3px solid rgb(120, 120, 120);
+      margin-bottom: 10px;
+    }
+    .DoneContainer {
+      border-bottom: 3px solid rgb(120, 120, 120);
+      margin-bottom: 10px;
+      todo {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+.Main-Input {
+  .Task-Name{
+    width: 60%;
+  }
+
+  .Task-Priority {
+    width: 13%;
+    margin-left: 1%;
+  }
+
+  .Calendar-Picker {
+    width: 25%;
+    margin-left: 1%;
+  }
+
+  .Task-Description {
+    width: 100%;
+  }
+
+  .Submit-Button {
+    width: 100%;
+    border: 1px solid rgb(142, 142, 142);
+  }
+}
+.Sort-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  button {
+    margin-left: 15px;
+  }
+}
+.Task {
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .InfoContainer {
+    width: 90%;
+    .FirstRow {
+      display: flex;
+      align-items: center;
+      width: 30%;
+      .TitleContainer {
+        margin: 5px 0;
+        padding: 0;
+      }
+      .DateContainer {
+        margin: 5px 0;
+        padding: 0;
+      }
+      .DescriptionContainer {
+        margin: 0;
+      }
+    }
+  }
+  img {
+    height: 50px;
+  }
+}
 

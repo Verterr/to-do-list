@@ -1,17 +1,17 @@
-<mat-card class="Task" style="margin-bottom: 1%; display: flex; justify-content: space-between; align-items: center">
-  <div class="infoContainer" style="width: 90%">
-    <div class="firstRow" style="display: flex; align-items: center; width: 30%">
-      <h3 class="titleContainer" style="margin: 5px 0; padding: 0;">
+<mat-card class="Task">
+  <div class="InfoContainer">
+    <div class="FirstRow">
+      <h3 class="TitleContainer" >
         {{todo.title}}
       </h3>
       <img src="./assets/icons8-{{todo.priority}}-priority-50.png" style="height: 3vh; margin-left: 5%"/>
     </div>
-    <h4 class="dateContainer" style="margin: 5px 0; padding: 0">
+    <h4 class="DateContainer">
       {{todo.date}}
     </h4>
-    <p class="descriptionContainer" style="margin: 0">
+    <p class="DescriptionContainer">
       {{todo.description}}
     </p>
   </div>
-  <img src="./assets/icons8-trash.svg" style="height: 8vh;" >
+  <img src="./assets/icons8-trash.svg" >
 </mat-card>

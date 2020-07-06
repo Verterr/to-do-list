@@ -6,7 +6,7 @@ import {Todo} from '../Todo/todo';
 @Component({
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrls: []
+  styleUrls: ['../app.component.scss']
 })
 export class TodoListComponent {
   todos = todoList;

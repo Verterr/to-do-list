@@ -3,10 +3,11 @@ import {Todo} from '../Todo/todo';
 import {todoList} from '../todoList';
 import {FormControl} from '@angular/forms';
 
+
 @Component({
   selector: 'main-input',
   templateUrl: './add-todo.component.html',
-  styleUrls: []
+  styleUrls: ['../app.component.scss']
 })
 export class AddTodoComponent {
 

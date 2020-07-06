@@ -5,7 +5,7 @@ import {doneList, inProgressList, todoList} from '../todoList';
 @Component({
   selector: 'sorts',
   templateUrl: './sorts.component.html',
-  styleUrls: []
+  styleUrls: ['../app.component.scss']
 })
 export class SortsComponent {
   todos = todoList;

@@ -1,3 +1,99 @@
+.MainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.MainContainer .InputContainer {
+  display: block;
+  margin: 5% auto 0 auto;
+  width: 80%;
+}
+.MainContainer .SortsContainer {
+  display: block;
+  margin: 2% auto 0 auto;
+  width: 80%;
+}
+.MainContainer .TaskListContainer {
+  display: block;
+  margin: 2% auto 0 auto;
+  width: 80%;
+}
+.MainContainer .TaskListContainer .InProgressContainer {
+  border-bottom: 3px solid #787878;
+  margin-bottom: 10px;
+}
+.MainContainer .TaskListContainer .TodoContainer {
+  border-bottom: 3px solid #787878;
+  margin-bottom: 10px;
+}
+.MainContainer .TaskListContainer .DoneContainer {
+  border-bottom: 3px solid #787878;
+  margin-bottom: 10px;
+}
+.MainContainer .TaskListContainer .DoneContainer todo {
+  text-decoration: line-through;
+}
 
+.Main-Input .Task-Name {
+  width: 60%;
+}
+.Main-Input .Task-Priority {
+  width: 13%;
+  margin-left: 1%;
+}
+.Main-Input .Calendar-Picker {
+  width: 25%;
+  margin-left: 1%;
+}
+.Main-Input .Task-Description {
+  width: 100%;
+}
+.Main-Input .Submit-Button {
+  width: 100%;
+  border: 1px solid #8e8e8e;
+}
+
+.Sort-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Sort-Container h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.Sort-Container button {
+  margin-left: 15px;
+}
+
+.Task {
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Task .InfoContainer {
+  width: 90%;
+}
+.Task .InfoContainer .FirstRow {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.Task .InfoContainer .FirstRow .TitleContainer {
+  margin: 5px 0;
+  padding: 0;
+}
+.Task .InfoContainer .FirstRow .DateContainer {
+  margin: 5px 0;
+  padding: 0;
+}
+.Task .InfoContainer .FirstRow .DescriptionContainer {
+  margin: 0;
+}
+.Task img {
+  height: 50px;
+}
 
 /*# sourceMappingURL=app.component.css.map */
