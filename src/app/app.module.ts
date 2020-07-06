@@ -6,8 +6,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
-import {MatNativeDateModule} from '@angular/material/core';
+import {DateAdapter, MatNativeDateModule} from '@angular/material/core';
 import {AddTodoComponent} from './add-todo/add-todo.component';
+import {CustomDateAdapter} from './add-todo/custom-date-adapter';
 import {TodoComponent} from './todo/todo.component';
 
 
@@ -40,7 +41,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ReactiveFormsModule,
     DragDropModule,
   ],
-  providers: [],
+  providers: [{ provide: DateAdapter, useClass: CustomDateAdapter }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
