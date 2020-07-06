@@ -1,10 +1,10 @@
-<mat-card class="Main-input">
+<mat-card class="Main-Input">
   <form (ngSubmit)="onSubmit(title, selected, date, description)">
-    <mat-form-field appearance="fill" style="width: 60%">
+    <mat-form-field class="Task-Name" appearance="fill">
       <mat-label>Task name</mat-label>
       <input matInput name="title" [(ngModel)]="model.title" #title='ngModel' required>
     </mat-form-field>
-    <mat-form-field appearance="fill" style="width: 13%; margin-left: 1%">
+    <mat-form-field class="Task-Priority" appearance="fill">
       <mat-label>Priority</mat-label>
       <mat-select required [formControl]="selected" [(ngModel)]="model.priority" [(value)]="model.priority">
         <mat-option value="low">Low</mat-option>
@@ -12,17 +12,17 @@
         <mat-option value="high">High</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill" style="width: 25%; margin-left: 1%">
+    <mat-form-field class="Calendar-Picker" appearance="fill">
       <mat-label>Choose a deadline date</mat-label>
       <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="model.date" #date='ngModel' [matDatepickerFilter]="dateFilter">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <br/>
-    <mat-form-field appearance="fill" style="width: 100%">
+    <mat-form-field class="Task-Description" appearance="fill">
       <mat-label>Task description</mat-label>
       <textarea matInput name="description" [(ngModel)]="model.description" #description='ngModel'></textarea>
     </mat-form-field>
-    <button type="submit" mat-flat-button style="width: 100%; border: 1px solid rgb(142,142,142)">Create task</button>
+    <button type="submit" class="Submit-Button" mat-flat-button>Create task</button>
   </form>
 </mat-card>

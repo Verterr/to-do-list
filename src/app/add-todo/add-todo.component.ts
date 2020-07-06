@@ -3,15 +3,16 @@ import {Todo} from '../Todo/todo';
 import {todoList} from '../todoList';
 import {FormControl} from '@angular/forms';
 
+
 @Component({
   selector: 'main-input',
   templateUrl: './add-todo.component.html',
-  styleUrls: []
+  styleUrls: ['../app.component.scss']
 })
 export class AddTodoComponent {
 
   currentDate = new FormControl(new Date());
-  model = new Todo( 'medium', '', null, '');
+  model = new Todo( 'todo','medium', '', null, '');
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
     if(date.model !== null){
@@ -20,13 +21,13 @@ export class AddTodoComponent {
     }
     if(title.model.length !== 0){
       todoList.push({
+        status: this.model.status,
         priority: priority.value,
         title: title.model,
         date: date.model,
         description: description.model
       });
     }
-    console.log(todoList);
   }
 
   dateFilter(day) {

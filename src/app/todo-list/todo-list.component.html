@@ -1,17 +1,17 @@
-<div class="MainContainer" style="height: 100vh; width: 100vw; display: flex; flex-direction: column;">
-  <div class="InputContainer" style="display: block; margin: 5% auto 0 auto; width: 80%">
+<div class="MainContainer">
+  <div class="InputContainer">
     <main-input></main-input>
   </div>
-  <div class="FiltersContainer" style="display: block; margin: 5% auto 0 auto; width: 80%">
+  <div class="SortsContainer">
     <sorts></sorts>
   </div>
-  <div class="TaskListContainer" style="display: block; margin: 2% auto 0 auto; width: 80%">
+  <div class="TaskListContainer">
     <div
       cdkDropList #inProgressList="cdkDropList"
       [cdkDropListData]="inProgress"
       [cdkDropListConnectedTo]="[doneList,todoList]"
       (cdkDropListDropped)="drop($event)"
-      class="InProgressContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      class="InProgressContainer">
       <h2>In Progress</h2>
       <todo *ngFor="let todo of inProgress" [todo]="todo" cdkDrag></todo>
     </div>
@@ -21,7 +21,7 @@
       [cdkDropListData]="todos"
       [cdkDropListConnectedTo]="[inProgressList,doneList]"
       (cdkDropListDropped)="drop($event)"
-      class="TodoContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      class="TodoContainer">
       <h2>Todo</h2>
       <todo *ngFor="let todo of todos" [todo]="todo" cdkDrag></todo>
     </div>
@@ -31,9 +31,9 @@
       [cdkDropListData]="done"
       [cdkDropListConnectedTo]="[inProgressList,todoList]"
       (cdkDropListDropped)="drop($event)"
-      class="DoneContainer" style="border-bottom: 3px solid rgb(120, 120, 120); margin-bottom: 10px">
+      class="DoneContainer">
       <h2>Done</h2>
-      <todo *ngFor="let todo of done" [todo]="todo" cdkDrag style="text-decoration: line-through"></todo>
+      <todo *ngFor="let todo of done" [todo]="todo" cdkDrag></todo>
     </div>
   </div>
 </div>
