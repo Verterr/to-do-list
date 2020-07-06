@@ -16,7 +16,6 @@ export class AddTodoComponent {
   selected = new FormControl('medium');
   onSubmit(title, priority, date, description) {
     if(date.model !== null){
-      console.log(date.model);
       date.model = date.model.toLocaleDateString();
     }
     if(title.model.length !== 0){

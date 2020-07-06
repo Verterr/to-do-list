@@ -24,9 +24,6 @@ export class TodoListComponent {
         event.container.data,
         event.previousIndex,
         event.currentIndex);
-      console.log(todoList);
-      console.log(inProgressList);
-      console.log(doneList);
     }
   }
 }
